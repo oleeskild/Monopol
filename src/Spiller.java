@@ -16,14 +16,14 @@ public class Spiller{
 		
 	}
 
+	public boolean equals(Spiller s){
+			return this.navn.equals(s.navn);
+	}
+	
 	public void flyttSpiller(int antallTrekk){
 		posisjon += antallTrekk;
 		if(posisjon > antallPosisjoner)
 			posisjon -= antallPosisjoner;
-	}
-	
-	public int hentPosisjon(){
-		return posisjon;
 	}
 
 
@@ -31,8 +31,8 @@ public class Spiller{
 		return navn;
 	}
 	
-	public boolean equals(Spiller s){
-			return this.navn.equals(s.navn);
+	public int hentPosisjon(){
+		return posisjon;
 	}
 		
 		

@@ -6,7 +6,7 @@ public class Aksje{
 	private int[] leiePris; // 0 = bare tomt 1 = 1 leilighet ... 4 = 4 leiligheter 5 = hotell
 	private int pantePris;
 	private int prisForHus;
-	private int gruppe; //Hvilken fargegruppe aksjen hører til. 0 = brun. 1 = blå. 2 = rosa. 3 = orange. 4 = roed. 5 = gul. 6 = gronn. 7 = blaa
+	private int gruppe; //Hvilken fargegruppe aksjen hï¿½rer til. 0 = brun. 1 = blï¿½. 2 = rosa. 3 = orange. 4 = roed. 5 = gul. 6 = gronn. 7 = blaa
 	private Spiller eier = null;
 	private int plassering;
 
@@ -21,22 +21,6 @@ public class Aksje{
 		this.plassering = plassering;
 	}
 
-	public int hentPris(){
-		return pris;
-	}
-
-	public int hentPantePris(){
-		return pantePris;
-	}
-
-	public int hentPrisForHus(){
-		return prisForHus;
-	}
-	
-	public void kjopAksje(Spiller spiller){
-		this.eier = spiller; 
-	}
-
 	public Spiller hentEier(){
 		return this.eier;
 	}
@@ -45,7 +29,23 @@ public class Aksje{
 		return this.navn;
 	}
 
+	public int hentPantePris(){
+		return pantePris;
+	}
+	
 	public int hentPlassering(){
 		return plassering;
+	}
+
+	public int hentPris(){
+		return pris;
+	}
+
+	public int hentPrisForHus(){
+		return prisForHus;
+	}
+
+	public void kjopAksje(Spiller spiller){
+		this.eier = spiller; 
 	}
 }
